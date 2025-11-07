@@ -1,0 +1,75 @@
+{
+  "root": "abc123",
+  "nodes": {
+    "abc123": {
+      "id": "abc123",
+      "asked": true,
+      "properties": {
+        "question": "a...z?",
+        "response": "a...z."
+      },
+      "content": ["russ123", "SFBayArea", "Warriors30"],
+      "parent": null
+    },
+    "russ123": {
+      "id": "russ123",
+      "asked": false,
+      "properties": {
+        "question": "a...z?",
+        "response": null
+      },
+      "content": [],
+      "parent": "abc123"
+    },
+    "SFBayArea": {
+      "id": "SFBayArea",
+      "asked": true,
+      "properties": {
+        "question": "a...z?",
+        "response": "a...z."
+      },
+      "content": ["WorthbeachSF"],
+      "parent": "abc123"
+    },
+    "WorthbeachSF": {
+      "id": "WorthbeachSF",
+      "asked": true,
+      "properties": {
+        "question": "a...z?",
+        "response": "a...z."
+      },
+      "content": [],
+      "parent": "SFBayArea"
+    },
+    "Warriors30": {
+      "id": "Warriors30",
+      "asked": true,
+      "properties": {
+        "question": "a...z?",
+        "response": "a...z."
+      },
+      "content": ["curry3", "3Buckets"],
+      "parent": "abc123"
+    },
+    "curry3": {
+      "id": "curry3",
+      "asked": true,
+      "properties": {
+        "question": "a...z?",
+        "response": "a...z."
+      },
+      "content": [],
+      "parent": "Warriors30"
+    },
+    "3Buckets": {
+      "id": "3Buckets",
+      "asked": true,
+      "properties": {
+        "question": "a...z?",
+        "response": "a...z."
+      },
+      "content": [],
+      "parent": "Warriors30"
+    }
+  }
+}
