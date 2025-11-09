@@ -1,0 +1,15 @@
+{
+  "root": "1",
+  "nodes": {
+        "1": {
+        "id": "1",
+        "status": "asking",
+        "properties": {
+            "question": "",
+            "response": null
+        },
+        "children": [],
+        "parent": null
+        }
+    }
+}

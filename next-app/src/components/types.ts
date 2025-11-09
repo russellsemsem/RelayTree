@@ -1,4 +1,9 @@
 // types.ts
+interface Tree {
+  root: string;
+  nodes: Record<string, Node>;
+}
+
 export interface NodeProperties {
   question: string;
   response: string | null;

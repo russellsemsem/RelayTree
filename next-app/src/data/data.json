@@ -3,72 +3,72 @@
   "nodes": {
     "abc123": {
       "id": "abc123",
-      "asked": true,
+      "status": "answered",
       "properties": {
         "question": "a...z?",
         "response": "a...z."
       },
-      "content": ["russ123", "SFBayArea", "Warriors30"],
+      "children": ["russ123", "SFBayArea", "Warriors30"],
       "parent": null
     },
     "russ123": {
       "id": "russ123",
-      "asked": false,
+      "status": "asking",
       "properties": {
         "question": "a...z?",
         "response": null
       },
-      "content": [],
+      "children": [],
       "parent": "abc123"
     },
     "SFBayArea": {
       "id": "SFBayArea",
-      "asked": true,
+      "status": "answered",
       "properties": {
         "question": "a...z?",
         "response": "a...z."
       },
-      "content": ["WorthbeachSF"],
+      "children": ["WorthbeachSF"],
       "parent": "abc123"
     },
     "WorthbeachSF": {
       "id": "WorthbeachSF",
-      "asked": true,
+      "status": "answered",
       "properties": {
         "question": "a...z?",
         "response": "a...z."
       },
-      "content": [],
+      "children": [],
       "parent": "SFBayArea"
     },
     "Warriors30": {
       "id": "Warriors30",
-      "asked": true,
+      "status": "answered",
       "properties": {
         "question": "a...z?",
         "response": "a...z."
       },
-      "content": ["curry3", "3Buckets"],
+      "children": ["curry3", "3Buckets"],
       "parent": "abc123"
     },
     "curry3": {
       "id": "curry3",
-      "asked": true,
+      "status": "answered",
       "properties": {
         "question": "a...z?",
         "response": "a...z."
       },
-      "content": [],
+      "children": [],
       "parent": "Warriors30"
     },
     "3Buckets": {
       "id": "3Buckets",
-      "asked": true,
+      "status": "answered",
       "properties": {
         "question": "a...z?",
         "response": "a...z."
       },
-      "content": [],
+      "children": [],
       "parent": "Warriors30"
     }
   }
