@@ -1,7 +1,20 @@
+import NodeCard from "@/components/card/nodeCard";
+
 export default function Home() {
   return (
     <div>
-      Home Page
+      <NodeCard
+        node={{
+          id: "1",
+          status: "asking",
+          properties: {
+            question: "",
+            response: "SF"
+          },
+          children: [],
+          parent: null
+        }}
+      />
     </div>
   );
 }
