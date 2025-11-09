@@ -33,21 +33,45 @@ export default function NodeCard({ nodeId }: NodeCardProps) {
     }));
   };
 
-  const handleGetResponse = () => {
+    const handleGetResponse = async () => {
+    const question = node.properties.question.trim();
+    if (!question) return;
+
     setNodeStatus("loading");
 
-    // TODO: fetch actual data
-    setTimeout(() => {
-      updateNode(nodeId, n => ({
+    try {
+        const res = await fetch("http://localhost:3030/response", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ question }),
+        });
+
+        if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        // backend is sending plain text
+        const answer = await res.text();
+
+        updateNode(nodeId, n => ({
         ...n,
         status: "answered",
         properties: {
-          ...n.properties,
-          response: `Mock answer for: ${n.properties.question}`,
+            ...n.properties,
+            response: answer,
         },
-      }));
-    }, 2000);
-  };
+        }));
+    } catch (error) {
+        console.error("Error fetching response:", error);
+        updateNode(nodeId, n => ({
+        ...n,
+        status: "error",
+        }));
+    }
+    };
+
 
   const handleReset = () => {
     updateNode(nodeId, n => ({
