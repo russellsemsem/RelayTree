@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { NodeStatus, Node } from "../types";
 import NodeFrame from "./nodeFrame";
+import ThinkingIndicator from "./thinkingCard";
 import {
   ArrowRight,
   MessageCircleQuestion,
@@ -195,9 +196,7 @@ export default function NodeCard({ nodeId }: NodeCardProps) {
         // ASKING / LOADING / ERROR
         <NodeFrame>
           {nodeStatus === "loading" && (
-            <div className="flex flex-1 items-center justify-center">
-              <div className="text-lg text-slate-500">Loading</div>
-            </div>
+            <ThinkingIndicator />
           )}
 
           {nodeStatus === "asking" && (
