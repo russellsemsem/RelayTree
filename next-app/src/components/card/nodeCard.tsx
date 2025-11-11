@@ -203,7 +203,7 @@ export default function NodeCard({ nodeId }: NodeCardProps) {
             <div className="flex flex-col flex-1">
               <textarea
                 className="
-                  flex-1 w-full resize-none bg-transparent
+                  flex-1 w-full resize-none bg-transparent text-slate-700 text-sm
                   focus:outline-none focus:ring-0 focus:border-transparent mb-2
                 "
                 value={node.properties.question}
